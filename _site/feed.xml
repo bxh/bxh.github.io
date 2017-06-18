@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-18T15:53:07-04:00</updated><id>http://localhost:4000/</id><title type="html">Bangxin Hu</title><subtitle>Front-end Developer * Healthcare Technology * Lifelong Learner</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:4000/Hello-World/" rel="alternate" type="text/html" title="Hello World" /><published>2016-06-18T00:00:00-04:00</published><updated>2016-06-18T00:00:00-04:00</updated><id>http://localhost:4000/Hello-World</id><content type="html" xml:base="http://localhost:4000/Hello-World/">&lt;blockquote&gt;
+  &lt;p&gt;To be is to do.&lt;/p&gt;
+
+  &lt;p&gt;–Immanuel Kant&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">To be is to do. –Immanuel Kant</summary></entry></feed>
