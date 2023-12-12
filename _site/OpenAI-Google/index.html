@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open AI Assistant can conduct Google Search – 胡邦昕 Bangxin Hu – Front-end Developer * Healthcare Technology * Lifelong Learner</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="OpenAI gained their global recognition through ChatGPT, a well-known chatbot. However, the capabilities of a Large Language Model (LLM) extend far beyond human-agent messaging. The real measure of an LLM’s effectiveness is in the variety of tasks it can perform for users. As of December 12th, 2023, although ChatGPT inherently suports Bing search, the Open AI API does not offer this functionality directly. Nevertheless, it is possible to enable the Open AI assistant to conduct Google searches by using function calling. This article provides a guide on implementing this in Typescript.
+
+" />
+    <meta property="og:description" content="OpenAI gained their global recognition through ChatGPT, a well-known chatbot. However, the capabilities of a Large Language Model (LLM) extend far beyond human-agent messaging. The real measure of an LLM’s effectiveness is in the variety of tasks it can perform for users. As of December 12th, 2023, although ChatGPT inherently suports Bing search, the Open AI API does not offer this functionality directly. Nevertheless, it is possible to enable the Open AI assistant to conduct Google searches by using function calling. This article provides a guide on implementing this in Typescript.
+
+" />
+    
+    <meta name="author" content="胡邦昕 Bangxin Hu" />
+
+    
+    <meta property="og:title" content="Open AI Assistant can conduct Google Search" />
+    <meta property="twitter:title" content="Open AI Assistant can conduct Google Search" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="胡邦昕 Bangxin Hu - Front-end Developer * Healthcare Technology * Lifelong Learner" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars3.githubusercontent.com/u/3732224?v=3&s=40" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">胡邦昕 Bangxin Hu</a></h1>
+            <p class="site-description">Front-end Developer * Healthcare Technology * Lifelong Learner</p>
+          </div>
+
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Open AI Assistant can conduct Google Search</h1>
+
+  <div class="entry">
+    <p>OpenAI gained their global recognition through <a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">ChatGPT</a>, a well-known chatbot. However, the capabilities of a Large Language Model (LLM) extend far beyond human-agent messaging. The real measure of an LLM’s effectiveness is in the variety of tasks it can perform for users. As of December 12th, 2023, although ChatGPT inherently suports Bing search, the Open AI API does not offer this functionality directly. Nevertheless, it is possible to enable the Open AI assistant to conduct Google searches by using <a href="https://platform.openai.com/docs/guides/function-calling">function calling</a>. This article provides a guide on implementing this in Typescript.</p>
+
+<h2 id="prerequisites">Prerequisites:</h2>
+<ul>
+  <li>An <a href="https://openai.com/blog/openai-api">Open AI API</a> key</li>
+  <li>A <a href="https://developers.google.com/custom-search/v1/overview">Google custom search</a> API key and search engine id.</li>
+</ul>
+
+<p>You can test your custom search engine by using curl.</p>
+
+<pre><code class="language-curl">curl --location 'https://www.googleapis.com/customsearch/v1?key=Google_API_Key&amp;cx=Google_CSE_ID&amp;&amp;q=123'
+</code></pre>
+
+<h2 id="step-1">Step 1:</h2>
+<p>Create an Open AI assistant and enable function calling. An example can be found below using GPT-4.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asst_000000000000000000000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assistant"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC AI Assistant"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gpt-4-1106-preview"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"instructions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC AI Assistant is a professional helper agent for clients using ABC platform. The agent maintains a professional demeanor."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tools"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"function"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"function"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"get_ABC_info"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Get information about ABC"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"query about ABC"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="nl">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"query"</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">Other</span><span class="w"> </span><span class="err">assistant</span><span class="w"> </span><span class="err">properties...</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In my case, I aim to develop a support agent tailored for ABC users to facilitate easier adoption. This agent will be programmed to automatically invoke the function whenever it receives a query about ABC. For this purpose, I’ve opted for a broad description of the function’s invoking criteria. It’s important to note that this approach is based on my personal preference and varies according to the specific conditions under which one wishes a function to be invoked.</p>
+
+<p>As shown below, GPT-4 invokes <code class="language-plaintext highlighter-rouge">get_ABC_info</code> when a question about ABC is present.</p>
+
+<p><img src="/images/function_calling.png" alt="Function Calling" /></p>
+
+<h2 id="step-2">Step 2:</h2>
+
+<p>Define a function <code class="language-plaintext highlighter-rouge">query_google</code>.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">query_google</span><span class="p">(</span>
+  <span class="nx">query</span><span class="p">:</span> <span class="kr">string</span>
+<span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Searching google with: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">query</span><span class="p">);</span>
+
+  <span class="kd">const</span> <span class="nx">googleSearchEndpoint</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://www.googleapis.com/customsearch/v1</span><span class="dl">"</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GOOGLE_API_KEY</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">cseId</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GOOGLE_CSE_ID</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">key</span><span class="p">:</span> <span class="nx">apiKey</span><span class="p">,</span>
+    <span class="na">cx</span><span class="p">:</span> <span class="nx">cseId</span><span class="p">,</span>
+    <span class="na">q</span><span class="p">:</span> <span class="nx">query</span><span class="p">,</span>
+  <span class="p">};</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">googleSearchEndpoint</span><span class="p">,</span> <span class="p">{</span> <span class="nx">params</span> <span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">items</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">link</span><span class="p">;</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Google result: </span><span class="dl">"</span><span class="p">,</span> <span class="nx">url</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">url</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to search google: </span><span class="dl">"</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="k">return</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">query</code> is set by GPT-4, based on user questions and their contexts.</p>
+
+<h2 id="step-3">Step 3:</h2>
+
+<p>In my situation, I need GPT-4 to generate responses based on the content extracted from links provided by Google searches. To achieve this, I’ll implement an additional function, <code class="language-plaintext highlighter-rouge">get_url_content</code>, designed to convert a URL into text.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">get_url_content</span><span class="p">(</span><span class="nx">url</span><span class="p">:</span> <span class="kr">string</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">cheerio</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span>
+      <span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">line</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">line</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span> <span class="o">!==</span> <span class="dl">""</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">text</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">`Unable to fetch </span><span class="p">${</span><span class="nx">url</span><span class="p">}</span><span class="s2">: `</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><strong>Note</strong> <a href="https://cheerio.js.org/">Cheerio</a> is a HTML parsing utility, aka jQuery but for nodejs.</p>
+
+<h2 id="step-4">Step 4:</h2>
+
+<p>Create a new <a href="https://platform.openai.com/docs/api-reference/runs">run</a> on a <a href="https://platform.openai.com/docs/api-reference/threads">thread</a>. And then invoke <code class="language-plaintext highlighter-rouge">query_google</code> and <code class="language-plaintext highlighter-rouge">get_url_content</code> when a run reaches <code class="language-plaintext highlighter-rouge">require_action</code> status. Next, submit the result of <code class="language-plaintext highlighter-rouge">get_url_content</code> back to open AI. Finally, list all messages after the run becomes <code class="language-plaintext highlighter-rouge">completed</code>.</p>
+
+<p><strong>Full example</strong></p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">openai</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenAI</span><span class="p">();</span>
+  <span class="c1">// Create a new thread.</span>
+  <span class="kd">const</span> <span class="nx">thread</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">thread_id</span> <span class="o">=</span> <span class="nx">thread</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+
+  <span class="c1">// Create a new message. </span>
+  <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">thread_id</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">role</span><span class="p">:</span> <span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tell me about ABC</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Create a new run.</span>
+  <span class="kd">const</span> <span class="nx">run</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">runs</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">thread_id</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">assistant_id</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">ASSISTANT_ID</span><span class="p">,</span>
+  <span class="p">});</span> 
+  <span class="kd">const</span> <span class="nx">run_id</span> <span class="o">=</span> <span class="nx">run</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="p">{</span><span class="nx">status</span><span class="p">,</span> <span class="nx">tool_calls</span><span class="p">}</span> <span class="o">=</span> <span class="nx">run</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span>
+    <span class="nx">status</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">queued</span><span class="dl">"</span> <span class="o">||</span>
+    <span class="nx">status</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">in_progress</span><span class="dl">"</span> <span class="o">||</span>
+    <span class="nx">status</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">requires_action</span><span class="dl">"</span>
+  <span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">requires_action</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">runs</span><span class="p">.</span><span class="nx">submitToolOutputs</span><span class="p">(</span><span class="nx">thread_id</span><span class="p">,</span> <span class="nx">run_id</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">tool_outputs</span><span class="p">:</span> <span class="k">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
+          <span class="nx">tool_calls</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">async</span> <span class="p">(</span><span class="nx">tc</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">query_google</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">tc</span><span class="p">.</span><span class="kd">function</span><span class="p">.</span><span class="nx">arguments</span><span class="p">).</span><span class="nx">query</span><span class="p">);</span>
+            <span class="kd">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">get_url_content</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+            <span class="k">return</span> <span class="p">({</span>
+              <span class="na">tool_call_id</span><span class="p">:</span> <span class="nx">tc</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+              <span class="na">output</span><span class="p">:</span> <span class="nx">content</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">})),</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="k">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="mi">1000</span><span class="p">));</span>
+
+    <span class="p">({</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">tool_calls</span> <span class="p">}</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">runs</span><span class="p">.</span><span class="nx">retrieve</span><span class="p">(</span><span class="nx">thread_id</span><span class="p">,</span> <span class="nx">run_id</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="kd">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">openai</span><span class="p">.</span><span class="nx">beta</span><span class="p">.</span><span class="nx">threads</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="nx">thread_id</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">messages</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Hooray! Your open AI assistant just answers a question using information from Google search.</p>
+
+<h2 id="considerations">Considerations</h2>
+
+<ol>
+  <li>This guide exemplifies <strong>retrieval-augmented generation, RAG</strong>. It merges GPT-4’s ability to autonomously generate queries with the dependendability of a search engine. Consequently, GPT-4 can provide responses enriched by information updated beyond Apr 2023.</li>
+  <li>In contrast to document retrieval, another prevalent RAG technique, using a search engine allows access to much broader range of documents without consuming excessive tokens.</li>
+  <li>Given that my objective is to create a support agent for ABC company, I have tailored the Google custom search engine to exclusively search our support website. This approach might also be applicable to your use case.</li>
+</ol>
+
+<p>Enjoy coding!</p>
+
+
+  </div>
+
+  <div class="date">
+    Written on December 12, 2023
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:hu.bangxin@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/https://github.com/bxh"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/https://www.linkedin.com/in/hubangxin"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="https://www.twitter.com/hubangxin"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
