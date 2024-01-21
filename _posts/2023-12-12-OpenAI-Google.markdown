@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Open AI Assistant can conduct Google Search 
+date:   2023-12-12 14:10:23 -0500
+categories: Coding, AI 
 ---
 
  OpenAI gained their global recognition through [ChatGPT](https://openai.com/blog/introducing-chatgpt-and-whisper-apis), a well-known chatbot. However, the capabilities of a Large Language Model (LLM) extend far beyond human-agent messaging. The real measure of an LLM's effectiveness is in the variety of tasks it can perform for users. As of December 12th, 2023, although ChatGPT inherently suports Bing search, the Open AI API does not offer this functionality directly. Nevertheless, it is possible to enable the Open AI assistant to conduct Google searches by using [function calling](https://platform.openai.com/docs/guides/function-calling). This article provides a guide on implementing this in Typescript.    

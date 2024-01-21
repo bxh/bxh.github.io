@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 军机与民主 
+date:   2024-01-13 14:10:23 -0500
+categories: Chinese 
 ---
 
 今天收到了来自于密歇根参议院[Gary Peters](https://www.peters.senate.gov/)的一封邮件，其标题是:Selfridge的重大胜利。他在里面宣布美国空军将在密歇根的[Selfridge](https://en.wikipedia.org/wiki/Selfridge_Air_National_Guard_Base)基地部署12架[KC-46“飞马座”空中加油机](https://en.wikipedia.org/wiki/Boeing_KC-46_Pegasus)。
