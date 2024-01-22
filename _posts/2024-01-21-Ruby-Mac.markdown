@@ -1,0 +1,100 @@
+---
+layout: post
+title: Navigating Ruby Versions on Mac in 2024 
+date: 2024-01-21 19:08:00 -0500
+categories: Coding 
+---
+
+## Navigating Ruby Versions on Mac in 2024
+
+Welcome to 2024! I've decided to give blogging another go.
+
+The blog was initially created seven years ago, and much has changed since then. It felt more practical to rebuild this site using the latest [GitHub Pages and Jekyll instructions](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll) than to navigate a complex upgrade path. However, I quickly encountered a puzzling error while trying to run the new site locally on my iMac:
+
+
+```bash
+jekyll 3.9.3 | Error:  undefined method `[]' for nil
+/usr/local/Cellar/ruby/3.3.0/lib/ruby/3.3.0/logger.rb:384:in `level': undefined method `[]' for nil (NoMethodError)
+@level_override[Fiber.current] || @level
+                   ^^^^^^^^^^^^^^^
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/log_adapter.rb:43:in `adjust_verbosity'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/configuration.rb:157:in `config_files'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll.rb:113:in `configuration'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/command.rb:43:in `configuration_from_options'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/commands/serve.rb:89:in `start'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/commands/serve.rb:75:in `block (2 levels) in init_with_program'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `each'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in `go'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/exe/jekyll:15:in `<top (required)>'
+    from /usr/local/lib/ruby/gems/3.3.0/bin/jekyll:25:in `load'
+    from /usr/local/lib/ruby/gems/3.3.0/bin/jekyll:25:in `<top (required)>'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:58:in `load'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:58:in `kernel_load'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:23:in `run'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:451:in `exec'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/command.rb:28:in `run'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in `invoke_command'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor.rb:527:in `dispatch'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:34:in `dispatch'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/base.rb:584:in `start'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:28:in `start'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/exe/bundle:28:in `block in <top (required)>'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/friendly_errors.rb:117:in `with_friendly_errors'
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/exe/bundle:20:in `<top (required)>'
+    from /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `load'
+    from /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `<main>'
+```
+
+It turns out that **Ruby 3.3.0 is yet incompatible with Jekyll**, according to [this StackOverflow discussion](https://stackoverflow.com/questions/77851863/bundle-exec-jekyll-serve-not-working-locally). And the suggested solution was to downgrading Ruby to 3.2.3. As a long-time user of Homebrew and NPM, I initially thought the solution was straighforward:
+
+```bash
+brew install ruby@3.2.3
+```
+
+However, it was not successful. **Homebrew doesn't support direct version specifications in `brew install` as npm does**. There are only separate formulas dedicated to the major versions that need to be maintained in parallel. So I installed `ruby@3.2` as follows:
+
+```bash
+brew install ruby@3.2
+```
+The installation was successful but with a caveat:
+
+```
+ruby@3.2 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+```
+
+"Keg-only" suggests that while the package is installed, it is not globally accessible. I preferred to avoid manually adjusting my `PATH` environment variable and sought a more elegant solution.
+
+Enter [chruby](https://github.com/postmodern/chruby), a Ruby version manager designed to handle multiple versions of Ruby on the same system. Here is how I set it up.
+
+1. Install `chruby` and `ruby-install`.
+```bash
+brew install chruby ruby-install 
+```
+
+2. Add `chruby` to the shell configuration file.
+```bash
+echo 'source /usr/local/share/chruby/chruby.sh' >> ~/.zshrc
+echo 'source /usr/local/share/chruby/auto.sh' >> ~/.zshrc
+```
+
+3. Install a specific version of Ruby.  
+```bash
+ruby-install ruby 3.2.3
+```
+
+4. Switch to the version.
+```bash
+chruby ruby-3.2.3
+```
+
+Note that the last step needs to be repeated for each shell session.
+
+After confirming the Ruby version with `ruby -v` and identifying the Ruby path with `which ruby``, I attempted to build my site locally again. This time, it worked perfectly. 
+
+**Takeaway**: For managing Ruby versions on MacOS, `chruby` and `ruby-install` are your best friends.
+
+Happy coding.
