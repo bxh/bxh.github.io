@@ -9,7 +9,8 @@ categories: AI
 ## Microsoft AI Tour in NYC: A Glimpse into the Future
 The Microsoft AI Tour recently made its stop in New York City, marking a significant moment for developers, tech enthusiasts, and professionals across various industries. The event, centered around the fusion of OpenAI and Azure, turned the spotlight on generative AI, showcasing its potential to revolutionize the tech landscape. Satya Nadella, Microsoft's CEO, delivered the keynote, sharing insights that underscored the transformative power of AI technologies.
 
-![A new platform being born]({{ BASE_PATH }}/images/ms-ai-tour/IMG_4207.jpg)
+![A new platform being born]({{ BASE_PATH }}/images/ms-ai-tour/IMG_4207.jpeg)
+
 
 ### From Skepticism to Advocacy: Nadella's AI Journey
 In his address, Nadella candidly shared his transition from being skeptical of generative AI to becoming a staunch advocate, largely influenced by his experience with GitHub Copilot. This AI-powered tool, which assists in coding by suggesting lines and functions, exemplified the practical benefits of AI, convincing Nadella of its value. He drew parallels between the advent of generative AI and past technological paradigm shifts that Microsoft has navigated, describing it as "another Mosaic moment" — a reference to the early web browser that played a pivotal role in popularizing the Internet. Nadella emphasized the importance of keeping humans in the loop, advocating for AI to be used in drafting preliminary ideas while leaving the final decisions to human discretion.
@@ -26,4 +27,4 @@ Despite some hiccups with code labs not running as smoothly as intended, the eve
 ### Looking Forward
 The Microsoft AI Tour in NYC served as a vivid reminder of the rapid advancements in AI and the critical role of platforms like Azure in making these technologies more accessible. While challenges remain, particularly in execution and reliability, the event painted a picture of a future where AI and human expertise combine to create more efficient, intelligent, and creative solutions. As developers and businesses continue to explore and adopt AI, the lessons and insights shared by Nadella and the demonstrations of AI's capabilities at the event will likely serve as valuable guidance in navigating the evolving tech landscape.
 
-![The Empire State]({{ BASE_PATH }}/images/ms-ai-tour/IMG_4295.jpg)
+![The Empire State]({{ BASE_PATH }}/images/ms-ai-tour/IMG_4295.jpeg)
