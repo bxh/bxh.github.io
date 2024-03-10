@@ -7,7 +7,7 @@ categories: AI
 
 
 ## Microsoft AI Tour in NYC: A Glimpse into the Future
-The Microsoft AI Tour recently made its stop in New York City, marking a significant moment for developers, tech enthusiasts, and professionals across various industries. The event, centered around the fusion of OpenAI and Azure, turned the spotlight on generative AI, showcasing its potential to revolutionize the tech landscape. Satya Nadella, Microsoft's CEO, delivered the keynote, sharing insights that underscored the transformative power of AI technologies.
+The Microsoft AI Tour (https://envision.microsoft.com/en-US/home) recently made its stop in New York City, marking a significant moment for developers, tech enthusiasts, and professionals across various industries. The event, centered around the fusion of OpenAI and Azure, turned the spotlight on generative AI, showcasing its potential to revolutionize the tech landscape. Satya Nadella, Microsoft's CEO, delivered the keynote, sharing insights that underscored the transformative power of AI technologies.
 
 ![A new platform being born]({{ BASE_PATH }}/images/ms-ai-tour/IMG_4207.jpeg)
 
