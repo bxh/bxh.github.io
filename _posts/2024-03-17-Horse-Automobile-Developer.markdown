@@ -5,8 +5,6 @@ date: 2024-03-17 02:40:00 -0500
 categories: AI 
 ---
 
-
-## Horses, Automobiles, and Developers
 In the late 19th and early 20th centuries, the horse-drawn carriage industry was a staple of American urban life, with 13,800 companies active in 1890. By 1920, this number had dwindled to just 90, as the advent of the automobile revolutionized transportation and led to the decline of the horse economy 1. Nowadays, places like Mackinac Island in Michigan, which prohibits cars to maintain its historical ambiance, are rare exceptions to the dominance of automobiles in the U.S.
 
 ![Hose-drawn carriage in Mackinac Island, MI]({{ BASE_PATH }}/images/horses-automobiles-developers/IMG_0245.JPG)

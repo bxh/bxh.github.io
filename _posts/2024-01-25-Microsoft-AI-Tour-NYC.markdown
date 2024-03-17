@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Microsoft AI Tour NYC 
+title: Microsoft AI Tour NYC
 date: 2024-01-24 10:00:00 -0500
 categories: AI 
 ---
