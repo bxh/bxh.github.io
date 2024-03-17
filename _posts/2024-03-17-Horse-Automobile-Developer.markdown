@@ -14,7 +14,7 @@ Similarly, the field of software development is experiencing a profound shift wi
 ### Embracing Continuous Education
 The rapid pace of any technological advancement necessitates ongoing education for developers. Unlike the horses of yesteryear, developers can actively acquire new skills, embracing AI and machine learning innovations to remain indispensable. Continuous learning allows developers to adapt to the ever-changing tech landscape. The rise of AI and LLMs presents a unique opportunity for developers to quickly broaden their skillsets. For instance, GPT-4 can generate practical code examples, enhancing conventional study techniques like reading and viewing tutorials.
 
-#### A simplified version of the Bully algorithm by ChatGPT in Python, which is used to elect a leader in distributed systems.
+*A simplified version of the Bully algorithm by ChatGPT in Python, which is used to elect a leader in distributed systems.*
 ```python
 class Node:
     def __init__(self, node_id):
