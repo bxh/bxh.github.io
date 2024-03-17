@@ -24,4 +24,4 @@ In addition to technical proficiency, developers must cultivate soft skills, inc
 
 The emergence of LLMs in the software development sphere does not spell obsolescence for developers but rather heralds a shift towards more valuable skills. By leveraging AI to augment their capabilities, developers can remain at the cutting edge of software innovation. The future of software development will be characterized by a symbiotic relationship between human ingenuity, ethical considerations, domain-specific knowledge, and artificial intelligence, setting the stage for unprecedented advancements and competitive advantages.
 
-[1](https://blogs.microsoft.com/today-in-tech/day-horse-lost-job/) The Day the Horse Lost Its Job 
+[1](https://blogs.microsoft.com/today-in-tech/day-horse-lost-job/) The Day the Horse Lost Its Job https://blogs.microsoft.com/today-in-tech/day-horse-lost-job/ 
