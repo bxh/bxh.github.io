@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Michigan Tech Conf
-date: 2024-03-24 18:10:00 -0500
+date: 2024-03-24 17:10:00 -0500
 categories: Michigan Technology
 ---
 
@@ -32,6 +32,8 @@ GitHub's proactive measures to prevent Copilot from regurgitating training data 
 #### Google's BeyondCorp and Operation Aurora
 
 The presentations on Google's [BeyondCorp](https://cloud.google.com/beyondcorp) were informational. Google moved away from the traditional VPN approach to Zero Trust Architecture. The fundamental flaw with VPNs is their inherent trust in all requests originating from the internal network. Conversely, Zero Trust Model scrutinizes every request, irrespective of its origin, based on the user's identity, the device used, permissions, and other factors. This strategic pivot was Google's response to [Operation Aurora](https://en.wikipedia.org/wiki/Operation_Aurora), a cyber attack launched by a national government in 2010. Personally, I'm grateful that the presenter did not explicitly name the nation involved.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TtmsV-xq0r0?si=dMr-iST4kINnJMus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Terraform Remote State Management
 

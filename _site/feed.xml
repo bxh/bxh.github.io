@@ -1,4 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T15:22:51-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Bangxin Hu’s Blog</title><subtitle>Full-stack developer in healthcare space | AI | Chinese American in Michigan</subtitle><entry><title type="html">军机与民主</title><link href="http://localhost:4000/2024/01/13/Gary-Peters-Selfridge/" rel="alternate" type="text/html" title="军机与民主" /><published>2024-01-13T14:10:23-05:00</published><updated>2024-01-13T14:10:23-05:00</updated><id>http://localhost:4000/2024/01/13/Gary-Peters-Selfridge</id><content type="html" xml:base="http://localhost:4000/2024/01/13/Gary-Peters-Selfridge/">&lt;p&gt;今天收到了来自于密歇根参议院&lt;a href=&quot;https://www.peters.senate.gov/&quot;&gt;Gary Peters&lt;/a&gt;的一封邮件，其标题是:Selfridge的重大胜利。他在里面宣布美国空军将在密歇根的&lt;a href=&quot;https://en.wikipedia.org/wiki/Selfridge_Air_National_Guard_Base&quot;&gt;Selfridge&lt;/a&gt;基地部署12架&lt;a href=&quot;https://en.wikipedia.org/wiki/Boeing_KC-46_Pegasus&quot;&gt;KC-46“飞马座”空中加油机&lt;/a&gt;。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-24T19:02:54-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Bangxin Hu’s Blog aka 自弹自唱</title><subtitle>- Full-stack developer in healthcare space - AI - Chinese American in Michigan</subtitle><entry><title type="html">Michigan Tech Conf</title><link href="http://localhost:4000/2024/03/24/Michigan-Tech-Conf/" rel="alternate" type="text/html" title="Michigan Tech Conf" /><published>2024-03-24T18:10:00-04:00</published><updated>2024-03-24T18:10:00-04:00</updated><id>http://localhost:4000/2024/03/24/Michigan-Tech-Conf</id><content type="html" xml:base="http://localhost:4000/2024/03/24/Michigan-Tech-Conf/">&lt;h3 id=&quot;reflections-from-the-first-annual-michigan-technology-conference&quot;&gt;Reflections from the First Annual Michigan Technology Conference&lt;/h3&gt;
+
+&lt;p&gt;This past week, I attended the first &lt;a href=&quot;https://www.mitechcon.org/&quot;&gt;Michigan Tech Conference&lt;/a&gt;, a gathering that brought in some of the most brilliant tech minds in from across Michigan and beyond. It was an inspiring confluence of innovation and networking. Below are my takeaways and insights.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-keynote-the-myopia-of-platform-companies&quot;&gt;The Keynote: The Myopia of Platform Companies&lt;/h4&gt;
+
+&lt;p&gt;The keynote address, delivered by Tim O’Relly, critiqued that platform companies’ short-sighted focus on extracting immediate value at the expense of long-term growth. This strategy, he argued, erodes the relationships with suppliers and users, paving the way for competitors. Bill Gates’s perspective, as shared by &lt;a href=&quot;https://stratechery.com/2018/the-bill-gates-line/&quot;&gt;Stratechery&lt;/a&gt;, that  “A platform is when the economic value of everybody that uses it, exceeds the value of the company that creates it. Then it’s a platform,” resonates here. As generative AI evolves, it will be interesting to observe if companies like OpenAI can indeed prioritize their customers’ value over their own.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/michigan-tech-conf/IMG_5446.jpeg&quot; alt=&quot;Tim O&apos;Relly at Michigan Technology Conference&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;a-brush-with-async&quot;&gt;A Brush with Async&lt;/h4&gt;
+
+&lt;p&gt;Meeting Stephen Cleary in person was a highlight. His insights into asynchronous operations in .NET, detailed in his &lt;a href=&quot;https://blog.stephencleary.com&quot;&gt;blog&lt;/a&gt;, are incredibly valuable. Stephen’s deep understanding emphasizes the power of specialization in technology, especially with the emergence of AI challenging developers to stay relevant.&lt;/p&gt;
+
+&lt;h4 id=&quot;openai-azure-and-beyond&quot;&gt;OpenAI, Azure, and Beyond&lt;/h4&gt;
+
+&lt;p&gt;The session on the latest &lt;a href=&quot;https://azure.microsoft.com/en-us/products/ai-studio&quot;&gt;Azure AI Studio&lt;/a&gt; showcased the potential of combining OpenAI’s capabilities with Microsoft’s platform, simplifying AI application development to low-code level. Yet, it’s an open question how much additional value Azure AI Studio will offer to entice users from competing cloud platforms.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Azure AI Studio is currently under public review.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-copilots-two-part-measures-against-regurgitation&quot;&gt;GitHub Copilot’s Two-Part Measures Against Regurgitation&lt;/h4&gt;
+
+&lt;p&gt;GitHub’s proactive measures to prevent Copilot from regurgitating training data are noteworthy. Through screening user requests via a separate large language model, GitHub filters out requests intended to coax the model to reveal its training information. In addition, GitHub conducts further reviews to ascertain if its outputs inadvertently include elements of the training data. Both actions can be executed instantaneously. It prompts curiosity about whether OpenAI is adopting similar measures, especially considering lawsuit with the New York Times.&lt;/p&gt;
+
+&lt;h4 id=&quot;googles-beyondcorp-and-operation-aurora&quot;&gt;Google’s BeyondCorp and Operation Aurora&lt;/h4&gt;
+
+&lt;p&gt;The presentations on Google’s &lt;a href=&quot;https://cloud.google.com/beyondcorp&quot;&gt;BeyondCorp&lt;/a&gt; were informational. Google moved away from the traditional VPN approach to Zero Trust Architecture. The fundamental flaw with VPNs is their inherent trust in all requests originating from the internal network. Conversely, Zero Trust Model scrutinizes every request, irrespective of its origin, based on the user’s identity, the device used, permissions, and other factors. This strategic pivot was Google’s response to &lt;a href=&quot;https://en.wikipedia.org/wiki/Operation_Aurora&quot;&gt;Operation Aurora&lt;/a&gt;, a cyber attack launched by a national government in 2010. Personally, I’m grateful that the presenter did not explicitly name the nation involved.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/TtmsV-xq0r0?si=dMr-iST4kINnJMus&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h4 id=&quot;terraform-remote-state-management&quot;&gt;Terraform Remote State Management&lt;/h4&gt;
+
+&lt;p&gt;Discussing remote state management with a Hashicorp engineer led me to reconsider how we handle Terraform states. Commonly, cloud-based blob storage solutions like AWS S3 are used for storing Terraform’s state files remotely. This approach is not only more secure than storing on a local device but also facilitates collaborative deployment modifications by preventing conflicts. For AWS users, ensuring the security of the S3 bucket is thus crucial, with recommended practices including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enable versioning to maintain a historical record of state files, which is invaluable for recovering previous versions if necessary due to loss or damage.&lt;/li&gt;
+  &lt;li&gt;Use Private Endpoint to permit access to the S3 buckets only from the VPC, avoiding the public internet completely.&lt;/li&gt;
+  &lt;li&gt;Use S3 access logs to monitor and identify any unauthorized attempts to access or update the state files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Alternatively, Terraform Cloud offers a comprehensive solution for remote state management, eliminating the need for additional configurations like a separate DynamoDB table for state locking, which is a requirement when using AWS S3. Terraform Cloud serves as an all-in-one platform, streamlining the process.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion-the-value-of-being-there&quot;&gt;Conclusion: The Value of Being There&lt;/h4&gt;
+
+&lt;p&gt;Attending the Michigan Tech Conference was an enriching experience that broadened my horizons. While the internet offers a vast reservoir of information, knowing what to search for is often the biggest hurdle. This conference not only provided a curated platform for learning and discovery but also emphasized the irreplaceable value of in-person interactions and the exchange of ideas. It’s a reminder that in the rapidly evolving tech landscape, staying connected and informed through such forums is invaluable.&lt;/p&gt;</content><author><name></name></author><category term="Michigan" /><category term="Technology" /><summary type="html">Reflections from the First Annual Michigan Technology Conference</summary></entry><entry><title type="html">Horses, Automobiles, and Developers</title><link href="http://localhost:4000/2024/03/17/Horse-Automobile-Developer/" rel="alternate" type="text/html" title="Horses, Automobiles, and Developers" /><published>2024-03-17T03:40:00-04:00</published><updated>2024-03-17T03:40:00-04:00</updated><id>http://localhost:4000/2024/03/17/Horse-Automobile-Developer</id><content type="html" xml:base="http://localhost:4000/2024/03/17/Horse-Automobile-Developer/">&lt;p&gt;In the late 19th and early 20th centuries, the horse-drawn carriage industry was a staple of American urban life, with 13,800 companies active in 1890. By 1920, this number had dwindled to just 90, as the advent of the automobile revolutionized transportation and led to the decline of the horse economy 1. Nowadays, places like Mackinac Island in Michigan, which prohibits cars to maintain its historical ambiance, are rare exceptions to the dominance of automobiles in the U.S.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/horses-automobiles-developers/IMG_0245.JPG&quot; alt=&quot;Hose-drawn carriage in Mackinac Island, MI&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, the field of software development is experiencing a profound shift with the advent of Large Language Models (LLMs) such as GPT-4. These models are increasingly capable of performing sophisticated programming tasks, including code writing, debugging, and algorithm optimization. This evolution prompts a reevaluation of the role of developers and how they can stay competitive in an age increasingly dominated by AI.&lt;/p&gt;
+
+&lt;h3 id=&quot;embracing-continuous-education&quot;&gt;Embracing Continuous Education&lt;/h3&gt;
+&lt;p&gt;The rapid pace of any technological advancement necessitates ongoing education for developers. Unlike the horses of yesteryear, developers can actively acquire new skills, embracing AI and machine learning innovations to remain indispensable. Continuous learning allows developers to adapt to the ever-changing tech landscape. The rise of AI and LLMs presents a unique opportunity for developers to quickly broaden their skillsets. For instance, GPT-4 can generate practical code examples, enhancing conventional study techniques like reading and viewing tutorials.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A simplified version of the Bully algorithm by ChatGPT in Python, which is used to elect a leader in distributed systems.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;elect_leader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Node &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; starts an election.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;higher_nodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;higher_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Node &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; becomes the leader.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_id&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;higher_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;leader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elect_leader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leader&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Example usage
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Create nodes
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# Assume a simple network where each node knows the other nodes
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# Initiate leader election from node1
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;leader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elect_leader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Leader is Node &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;leader&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;specializing-in-key-domain&quot;&gt;Specializing in Key Domain&lt;/h3&gt;
+&lt;p&gt;Specialization in particular domains, such as healthcare or finance, ensures that developers possess another competitive edge. While LLMs can offer technical solutions, the intricate knowledge of specific sectors’ challenges and regulations necessitates human expertise. Moreover, applying LLMs to address domain-specific problems, especially those involving natural language processing (NLP), can significantly add value.&lt;/p&gt;
+
+&lt;h3 id=&quot;enhancing-soft-skills&quot;&gt;Enhancing Soft Skills&lt;/h3&gt;
+&lt;p&gt;In addition to technical proficiency, developers must cultivate soft skills, including leadership, problem-solving, and adaptability. These competencies are essential for effective teamwork, meeting stakeholders’ expectations, and navigating new challenges. Utilizing LLMs for coding requires problem decomposition, evaluation of generated solutions, and iterative questioning—all of which benefit from strong leadership and soft skills.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;The emergence of LLMs in the software development sphere does not spell obsolescence for developers but rather heralds a shift towards more valuable skills. By leveraging AI to augment their capabilities, developers can remain at the cutting edge of software innovation. The future of software development will be characterized by a symbiotic relationship between human ingenuity, ethical considerations, domain-specific knowledge, and artificial intelligence, setting the stage for unprecedented advancements and competitive advantages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.microsoft.com/today-in-tech/day-horse-lost-job/&quot;&gt;1&lt;/a&gt; The Day the Horse Lost Its Job https://blogs.microsoft.com/today-in-tech/day-horse-lost-job/&lt;/p&gt;</content><author><name></name></author><category term="AI" /><summary type="html">In the late 19th and early 20th centuries, the horse-drawn carriage industry was a staple of American urban life, with 13,800 companies active in 1890. By 1920, this number had dwindled to just 90, as the advent of the automobile revolutionized transportation and led to the decline of the horse economy 1. Nowadays, places like Mackinac Island in Michigan, which prohibits cars to maintain its historical ambiance, are rare exceptions to the dominance of automobiles in the U.S.</summary></entry><entry><title type="html">Microsoft AI Tour NYC</title><link href="http://localhost:4000/2024/01/24/Microsoft-AI-Tour-NYC/" rel="alternate" type="text/html" title="Microsoft AI Tour NYC" /><published>2024-01-24T10:00:00-05:00</published><updated>2024-01-24T10:00:00-05:00</updated><id>http://localhost:4000/2024/01/24/Microsoft-AI-Tour-NYC</id><content type="html" xml:base="http://localhost:4000/2024/01/24/Microsoft-AI-Tour-NYC/">&lt;h2 id=&quot;microsoft-ai-tour-in-nyc-a-glimpse-into-the-future&quot;&gt;Microsoft AI Tour in NYC: A Glimpse into the Future&lt;/h2&gt;
+&lt;p&gt;The Microsoft AI Tour (https://envision.microsoft.com/en-US/home) recently made its stop in New York City, marking a significant moment for developers, tech enthusiasts, and professionals across various industries. The event, centered around the fusion of OpenAI and Azure, turned the spotlight on generative AI, showcasing its potential to revolutionize the tech landscape. Satya Nadella, Microsoft’s CEO, delivered the keynote, sharing insights that underscored the transformative power of AI technologies.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ms-ai-tour/IMG_4207.jpeg&quot; alt=&quot;A new platform being born&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;from-skepticism-to-advocacy-nadellas-ai-journey&quot;&gt;From Skepticism to Advocacy: Nadella’s AI Journey&lt;/h3&gt;
+&lt;p&gt;In his address, Nadella candidly shared his transition from being skeptical of generative AI to becoming a staunch advocate, largely influenced by his experience with GitHub Copilot. This AI-powered tool, which assists in coding by suggesting lines and functions, exemplified the practical benefits of AI, convincing Nadella of its value. He drew parallels between the advent of generative AI and past technological paradigm shifts that Microsoft has navigated, describing it as “another Mosaic moment” — a reference to the early web browser that played a pivotal role in popularizing the Internet. Nadella emphasized the importance of keeping humans in the loop, advocating for AI to be used in drafting preliminary ideas while leaving the final decisions to human discretion.&lt;/p&gt;
+
+&lt;h3 id=&quot;demystifying-generative-ai-for-developers&quot;&gt;Demystifying Generative AI for Developers&lt;/h3&gt;
+&lt;p&gt;The primary aim of the event was educational, designed to demystify generative AI for the developer community. Sessions were tailored to be beginner-friendly, with many starting from the basics of explaining what generative AI is. This approach not only made the complex subject matter accessible but also highlighted the practical applications of combining OpenAI’s capabilities with Azure’s robust cloud infrastructure. Microsoft positioned Azure as the platform that enhances the efficiency, accessibility, scalability, and security of OpenAI’s offerings, making sophisticated AI tools more attainable for developers and businesses.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-wide-spectrum-of-interest&quot;&gt;A Wide Spectrum of Interest&lt;/h3&gt;
+&lt;p&gt;The appeal of generative AI was evident in the diverse attendance at the event, with professionals from technology, finance, retail, and even representatives from the New York State Court showing keen interest. This diversity underscores the versatile applications of AI across different sectors, promising innovation and efficiency improvements.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-promise-and-pitfalls-of-practical-implementation&quot;&gt;The Promise and Pitfalls of Practical Implementation&lt;/h3&gt;
+&lt;p&gt;Despite some hiccups with code labs not running as smoothly as intended, the event showcased several intriguing demos that highlighted the practical uses of generative AI. Examples included a chatbot designed for customer support that uses the current browser page as context, and a RAG pipeline capable of embedding citations directly into response text. Moreover, innovative uses of generative AI for security analysis and even employing one AI to evaluate the truthfulness of another’s output were demonstrated, illustrating the broad potential of these technologies.&lt;/p&gt;
+
+&lt;h3 id=&quot;looking-forward&quot;&gt;Looking Forward&lt;/h3&gt;
+&lt;p&gt;The Microsoft AI Tour in NYC served as a vivid reminder of the rapid advancements in AI and the critical role of platforms like Azure in making these technologies more accessible. While challenges remain, particularly in execution and reliability, the event painted a picture of a future where AI and human expertise combine to create more efficient, intelligent, and creative solutions. As developers and businesses continue to explore and adopt AI, the lessons and insights shared by Nadella and the demonstrations of AI’s capabilities at the event will likely serve as valuable guidance in navigating the evolving tech landscape.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ms-ai-tour/IMG_4295.jpeg&quot; alt=&quot;The Empire State&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="AI" /><summary type="html">Microsoft AI Tour in NYC: A Glimpse into the Future The Microsoft AI Tour (https://envision.microsoft.com/en-US/home) recently made its stop in New York City, marking a significant moment for developers, tech enthusiasts, and professionals across various industries. The event, centered around the fusion of OpenAI and Azure, turned the spotlight on generative AI, showcasing its potential to revolutionize the tech landscape. Satya Nadella, Microsoft’s CEO, delivered the keynote, sharing insights that underscored the transformative power of AI technologies.</summary></entry><entry><title type="html">Navigating Ruby Versions on Mac in 2024</title><link href="http://localhost:4000/2024/01/21/Ruby-Mac/" rel="alternate" type="text/html" title="Navigating Ruby Versions on Mac in 2024" /><published>2024-01-21T19:08:00-05:00</published><updated>2024-01-21T19:08:00-05:00</updated><id>http://localhost:4000/2024/01/21/Ruby-Mac</id><content type="html" xml:base="http://localhost:4000/2024/01/21/Ruby-Mac/">&lt;h2 id=&quot;navigating-ruby-versions-on-mac-in-2024&quot;&gt;Navigating Ruby Versions on Mac in 2024&lt;/h2&gt;
+
+&lt;p&gt;Welcome to 2024! I’ve decided to give blogging another go.&lt;/p&gt;
+
+&lt;p&gt;The blog was initially created seven years ago, and much has changed since then. It felt more practical to rebuild this site using the latest &lt;a href=&quot;https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll&quot;&gt;GitHub Pages and Jekyll instructions&lt;/a&gt; than to navigate a complex upgrade path. However, I quickly encountered a puzzling error while trying to run the new site locally on my iMac:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll 3.9.3 | Error:  undefined method &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos; for nil
+/usr/local/Cellar/ruby/3.3.0/lib/ruby/3.3.0/logger.rb:384:in `level&apos;&lt;/span&gt;: undefined method &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos; for nil (NoMethodError)
+@level_override[Fiber.current] || @level
+                   ^^^^^^^^^^^^^^^
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/log_adapter.rb:43:in `adjust_verbosity&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/configuration.rb:157:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;config_files&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll.rb:113:in `configuration&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/command.rb:43:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;configuration_from_options&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/commands/serve.rb:89:in `start&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/lib/jekyll/commands/serve.rb:75:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;block &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2 levels&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;init_with_program&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;each&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;go&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/jekyll-3.9.3/exe/jekyll:15:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;top &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;required&lt;span class=&quot;o&quot;&gt;)&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/bin/jekyll:25:in `load&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/bin/jekyll:25:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&amp;lt;top &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;required&lt;span class=&quot;o&quot;&gt;)&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:58:in `load&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:58:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;kernel_load&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli/exec.rb:23:in `run&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:451:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/command.rb:28:in `run&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:127:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;invoke_command&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor.rb:527:in `dispatch&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:34:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dispatch&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/vendor/thor/lib/thor/base.rb:584:in `start&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/cli.rb:28:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;start&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/exe/bundle:28:in `block in &amp;lt;top (required)&amp;gt;&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/lib/bundler/friendly_errors.rb:117:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;with_friendly_errors&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/gems/bundler-2.5.5/exe/bundle:20:in `&amp;lt;top (required)&amp;gt;&apos;&lt;/span&gt;
+    from /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;load&lt;span class=&quot;s1&quot;&gt;&apos;
+    from /usr/local/lib/ruby/gems/3.3.0/bin/bundle:25:in `&amp;lt;main&amp;gt;&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It turns out that &lt;strong&gt;Ruby 3.3.0 is yet incompatible with Jekyll&lt;/strong&gt;, according to &lt;a href=&quot;https://stackoverflow.com/questions/77851863/bundle-exec-jekyll-serve-not-working-locally&quot;&gt;this StackOverflow discussion&lt;/a&gt;. And the suggested solution was to downgrading Ruby to 3.2.3. As a long-time user of Homebrew and NPM, I initially thought the solution was straighforward:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby@3.2.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, it was not successful. &lt;strong&gt;Homebrew doesn’t support direct version specifications in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew install&lt;/code&gt; as npm does&lt;/strong&gt;. There are only separate formulas dedicated to the major versions that need to be maintained in parallel. So I installed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby@3.2&lt;/code&gt; as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby@3.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The installation was successful but with a caveat:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby@3.2 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;“Keg-only” suggests that while the package is installed, it is not globally accessible. I preferred to avoid manually adjusting my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; environment variable and sought a more elegant solution.&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;a href=&quot;https://github.com/postmodern/chruby&quot;&gt;chruby&lt;/a&gt;, a Ruby version manager designed to handle multiple versions of Ruby on the same system. Here is how I set it up.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chruby&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby-install&lt;/code&gt;.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;chruby ruby-install 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chruby&lt;/code&gt; to the shell configuration file.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;source /usr/local/share/chruby/chruby.sh&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;source /usr/local/share/chruby/auto.sh&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install a specific version of Ruby.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby-install ruby 3.2.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Switch to the version.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chruby ruby-3.2.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note that the last step needs to be repeated for each shell session.&lt;/p&gt;
+
+&lt;p&gt;After confirming the Ruby version with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby -v&lt;/code&gt; and identifying the Ruby path with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which ruby&lt;/code&gt;`, I attempted to build my site locally again. This time, it worked perfectly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Takeaway&lt;/strong&gt;: For managing Ruby versions on MacOS, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chruby&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby-install&lt;/code&gt; are your best friends.&lt;/p&gt;
+
+&lt;p&gt;Happy coding.&lt;/p&gt;</content><author><name></name></author><category term="Coding" /><summary type="html">Navigating Ruby Versions on Mac in 2024</summary></entry><entry><title type="html">军机与民主</title><link href="http://localhost:4000/2024/01/13/Gary-Peters-Selfridge/" rel="alternate" type="text/html" title="军机与民主" /><published>2024-01-13T14:10:23-05:00</published><updated>2024-01-13T14:10:23-05:00</updated><id>http://localhost:4000/2024/01/13/Gary-Peters-Selfridge</id><content type="html" xml:base="http://localhost:4000/2024/01/13/Gary-Peters-Selfridge/">&lt;p&gt;今天收到了来自于密歇根参议院&lt;a href=&quot;https://www.peters.senate.gov/&quot;&gt;Gary Peters&lt;/a&gt;的一封邮件，其标题是:Selfridge的重大胜利。他在里面宣布美国空军将在密歇根的&lt;a href=&quot;https://en.wikipedia.org/wiki/Selfridge_Air_National_Guard_Base&quot;&gt;Selfridge&lt;/a&gt;基地部署12架&lt;a href=&quot;https://en.wikipedia.org/wiki/Boeing_KC-46_Pegasus&quot;&gt;KC-46“飞马座”空中加油机&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/selfridge/Gary_Peters_official_photo_115th_congress.jpg&quot; alt=&quot;Gary Peters&quot; /&gt;&lt;/p&gt;
 
