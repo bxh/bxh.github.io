@@ -2,7 +2,7 @@
 layout: post
 title: Michigan Tech Conf
 date: 2024-03-24 18:10:00 -0500
-categories: Michigan, Technology
+categories: Michigan Technology
 ---
 
 ### Reflections from the First Annual Michigan Technology Conference
